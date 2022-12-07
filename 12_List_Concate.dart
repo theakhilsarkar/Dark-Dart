@@ -7,19 +7,14 @@
 import 'dart:io';
 
 void main() {
-  List l1 = [];
-  List l2 = ["Hello"];
-
-  int a;
-  print("Enter element of List : ");
-  for (int i = 0; i <= 2; i++) {
-    String? x = stdin.readLineSync();
-    a = int.parse(x!);
-    l1.add(a);
-  }
+  List l1 = [1,2,3];
+  List l2 = ["Hello","Hello","Hello"];
+  List l3 = [];
 
   for(int i=0; i<=2; i++)
   {
-    print("${l1[i]} ${l2[0]}");
+    l3.add("${l1[i]} ${l2[0]}");
   }
+  print(l3);
+  
 }
