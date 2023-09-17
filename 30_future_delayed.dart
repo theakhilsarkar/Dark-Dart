@@ -17,11 +17,15 @@ void timerClass() {
 }
 
 void timerPerioidic() {
-  Timer.periodic(Duration(seconds: 1), (timer) {
-    if (dateTime != DateTime.now()) {
-      print("${DateTime.now().second}");
-    }
-  });
+  Timer.periodic(
+    Duration(seconds: 1),
+    (timer) {
+      if (dateTime != DateTime.now()) {
+        print(
+            "${DateTime.now().hour} : ${DateTime.now().minute} : ${DateTime.now().second}");
+      }
+    },
+  );
 }
 
 void main() {
