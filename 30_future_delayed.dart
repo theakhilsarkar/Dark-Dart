@@ -1,5 +1,7 @@
 import 'dart:async';
 
+DateTime dateTime = new DateTime.now();
+
 Future futureDelayed() {
   return Future.delayed(
     Duration(seconds: 2),
@@ -14,7 +16,16 @@ void timerClass() {
   );
 }
 
+void timerPerioidic() {
+  Timer.periodic(Duration(seconds: 1), (timer) {
+    if (dateTime != DateTime.now()) {
+      print("${DateTime.now().second}");
+    }
+  });
+}
+
 void main() {
   futureDelayed();
   timerClass();
+  timerPerioidic();
 }
