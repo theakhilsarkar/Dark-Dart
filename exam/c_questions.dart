@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 List c_language_questionList = [
   "What is the history of C Language? What is the importance of C language?",
   "Explain the difference between Compiler and Interpreter.",
@@ -40,46 +39,4 @@ List c_language_questionList = [
   "What is an Array of objects in Structure? Describe with an example.",
   "why we use file handling ?",
 ];
-=======
-List c_language_questionList = [
-  "What is the history of C Language? What is the importance of C language?",
-  "Explain the difference between Compiler and Interpreter.",
-  "What is Data Type? Explain with examples.",
-  "What is Variable? What is Constant Variable? Explain with examples.",
-  "What is a Format Specifier? Explain the use case of each format specifier.",
-  "Explain printf() and scanf() functions in detail. Explain Keywords in C language.What are the basic rules for creating a Variable?",
-  "What is an Operator? Explain its types.",
-  "Explain Type Casting or Type Conversation.",
-  "Explain types of Control Structure.",
-  "Explain if else - ladder - nested if else.",
-  "Explain ternary operator and switch case and its use cases.",
-  "What is Loop? Explain types of Loops.",
-  "Explain Entry-controlled loops with exits.",
-  "Explain an exit-controlled loop with examples.",
-  "Explain Control Statements with examples.",
-  "State the difference between entry-controlled and exit-controlled d the loops.",
-  "What is Array? Explain its types.",
-  "What is a 1D array? Explain with an example.",
-  "What is a 2D array? Explain with an example.",
-  "Explain the logic of finding the sum of all diagonal elements.",
-  "Explain the logic of sort array in acending order.",
-  "Explain the logic of finding the maximum elements. from the 1d array",
-  "Explain the logic of finding the sum of all anti-diagonal elements.",
-  "Explain the logic of remove an element from the 1d array.",
-  "Explain the logic of finding the sum of target element from the 1d array.",
-  "What is String , ASCII Value, and NULL with example ?",
-  "List at least 5 built-in string functions with examples.",
-  "What is Function? Explain the types of it.",
-  "What is a User Defined Function (UDF)? Explain the types of it.",
-  "What is Recursion? Explain the working of a Recursion mechanism with an example.",
-  "What is Nested Function? Explain with an example.",
-  "What is Pointer? Explain its use case.",
-  "Explain the working of the sizeof() operator.",
-  "Describe an Array of Pointers with an example.",
-  "What is the Chain of Pointers? Describe with an example.",
-  "Explain the Pointer with UDF in detail.",
-  "State the difference between a Structure & Union.",
-  "What is an Array of objects in Structure? Describe with an example.",
-  "why we use file handling ?",
-];
->>>>>>> cf3363698f0acb28c36bff8a7f9ad49163e4e4a8
+
