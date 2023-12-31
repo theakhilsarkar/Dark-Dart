@@ -36,5 +36,5 @@ class Print
 
 void main()
 {
-  Print p1 = Print();  
+  // Print p1 = Print();  
 }
