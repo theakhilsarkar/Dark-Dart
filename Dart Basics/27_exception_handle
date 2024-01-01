@@ -1,0 +1,27 @@
+
+
+import 'dart:io';
+
+void main()
+{
+  int? num1,num2;
+  String? n1,n2;
+  print("Enter a number : ");
+  n1 = stdin.readLineSync();
+  print("Enter a number : ");
+  n2 = stdin.readLineSync();
+
+  try
+  {
+    num1 = int.parse(n1!);
+    num2 = int.parse(n2!);
+    print("division is : ${num1~/num2}");
+  }
+  catch(e)
+  {
+    print("Enter valid number !");
+  }
+  
+
+
+}
