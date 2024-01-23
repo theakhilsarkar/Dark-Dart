@@ -1,5 +1,3 @@
-import 'classA.dart';
-import 'classB.dart';
 import 'classC.dart';
 
 void main() {
