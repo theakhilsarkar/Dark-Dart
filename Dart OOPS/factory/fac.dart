@@ -1,14 +1,16 @@
 class Shape {
-  late int length;
-  late int width;
-  late int area;
+  int? a, b, sum;
 
-  Shape._internal(this.length, this.width) {
-    area = length * width;
-    print(area);
-  }
+  // Shape({this.a, this.b}) {
+  //   sum = a! + b!;
+  // }
 
-  factory Shape({required int length, required int width}) {
-    return Shape._internal(length, width);
-  }
+  // Shape set({int? a, int? b}) {
+  //   this.a = a;
+  //   this.b = b;
+  //   Shape s1 = Shape();
+  //   s1.a = this.a;
+  //   s1.b = this.b;
+  //   return s1;
+  // }
 }
