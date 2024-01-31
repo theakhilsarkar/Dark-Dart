@@ -1,65 +1,28 @@
-#include<stdio.h>
-main()
-{
-	int i,j,k;
-	for(i=1; i<=4; i++)
-	{
-		for(k=i; k<5; k++)
-		{
-			printf(" ");
-		}
-		for(j=1; j<=i; j++)
-		{
-			if(j>=2)
-			{
-				printf(" ");
-			}
-			else
-			{
-				printf("*");
-			}
-		}
-		for(j=i-1; j>=1; j--)
-		{
-			if(j>=2)
-			{
-				printf(" ");
-			}
-			else
-			{
-				printf("*");
-			}
-		}
-		printf("\n");
-	}
-	for(i=1; i<=5; i++)
-	{
-		for(k=1; k<i; k++)
-		{
-			printf(" ");
-		}
-		for(j=5; j>=i; j--)
-		{
-			if(j<=4)
-			{
-				printf(" ");
-			}
-			else
-			{
-				printf("*");
-			}
-		}
-		for(j=i+1; j<=5; j++)
-		{
-				if(j<=4)
-			{
-				printf(" ");
-			}
-			else
-			{
-				printf("*");
-			}
-		}
-		printf("\n");
-	}
+#include <stdio.h>
+
+void printPattern() {
+    int rows = 5; // Number of rows in the pattern
+
+    // Loop through each row and column to print the pattern
+    for (int i = 0; i < rows; i++) {
+        int currentNumber = i + 1;
+
+        for (int j = 0; j <= i; j++) {
+            printf("%d ", currentNumber);
+
+            // Update currentNumber based on the logic
+            if (j % 2 == 0) {
+                currentNumber += (rows - j);
+            } else {
+                currentNumber += (rows + j);
+            }
+        }
+
+        printf("\n");
+    }
+}
+
+int main() {
+    printPattern();
+    return 0;
 }

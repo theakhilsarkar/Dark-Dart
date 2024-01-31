@@ -1,18 +1,19 @@
-import 'fromMap.dart';
-import 'fac.dart';
+import 'dart:io';
+
+
+// 1
+// 2 9 10
+// 3 8 11 14
+// 5 6 12 13 15
 
 void main() {
-  Map m1 = {
-    'id': 101,
-    'name': "iPhone12",
-    'price': 52000,
-    'rating': 4,
-  };
+  int x = 1;
 
-  Product p1 = Product(m1);
-
-  print(p1.p_id);
-  print(p1.p_name);
-  print(p1.p_price);
-  print(p1.p_rating);
+  for (int i = 1; i <= 5; i++) {
+    for (int j = 1; j <= i; j++) {
+      stdout.write("$x ");
+    }
+    x = i;
+    print("");
+  }
 }
