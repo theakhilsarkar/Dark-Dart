@@ -4,6 +4,7 @@ class GameEngine {
   late int x, y;
   bool isGameWin = false;
   bool crossTurn = true;
+  int gameEndCount = 9;
   String winnerStatus = 'Draw';
   List<List<dynamic>> gameBoard = [
     [0, 1, 2],
@@ -125,10 +126,12 @@ class GameEngine {
     stdout.write('y : ');
     y = int.parse(stdin.readLineSync()!);
     if (gameBoard[x][y] == 'X' || gameBoard[x][y] == 'O') {
-      print('Repeat postion entry not allowed !');
+      print('\n------Repeat postion entry not allowed !------\n');
       zeroInput();
     }
     gameBoard[x][y] = 'O';
+    gameEndCount--;
+    print(gameEndCount);
     print("\n");
   }
 
@@ -142,10 +145,12 @@ class GameEngine {
     stdout.write('y : ');
     y = int.parse(stdin.readLineSync()!);
     if (gameBoard[x][y] == 'X' || gameBoard[x][y] == 'O') {
-      print('Repeat postion entry not allowed !');
+      print('\n------Repeat postion entry not allowed !------\n');
       crossInput();
     }
     gameBoard[x][y] = 'X';
+    gameEndCount--;
+    print(gameEndCount);
     print("\n");
   }
 
@@ -160,7 +165,7 @@ class GameEngine {
       crossTurn = true;
     }
 
-    if (isGameWin) {
+    if (isGameWin || gameEndCount == 0) {
       showGameBoard();
       print("Game Over - $winnerStatus");
     } else {
