@@ -203,9 +203,19 @@ class GameEngine {
         } else if (gameBoard[1][1] == 'O' && gameBoard[2][2] != 'O') {
           gameBoard[2][2] = 'X';
           showGameBoard();
+        } else if (gameBoard[0][2] == gameBoard[2][0] &&
+            (gameBoard[0][0] != 'O' && gameBoard[0][0] != 'X')) {
+          gameBoard[0][0] = 'X';
+          showGameBoard();
         }
-
         break;
+      case 7:
+        if (gameBoard[0][0] == gameBoard[2][0] &&
+            (gameBoard[0][0] == 'X' &&
+                (gameBoard[1][0] != 'X' && gameBoard[1][0] != 'O'))) {
+          gameBoard[1][0] = 'X';
+          showGameBoard();
+        }
     }
   }
 
