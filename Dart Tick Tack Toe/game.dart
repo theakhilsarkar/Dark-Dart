@@ -192,6 +192,12 @@ class GameEngine {
             gameBoard[1][1] != 'O') {
           gameBoard[1][1] = 'X';
           showGameBoard();
+        } else if (gameBoard[0][1] == gameBoard[1][1] &&
+            gameBoard[1][1] == 'O' &&
+            gameBoard[2][1] != 'O' &&
+            gameBoard[2][1] != 'X') {
+          gameBoard[2][1] = 'X';
+          showGameBoard();
         } else if (gameBoard[0][0] == gameBoard[0][2] &&
             gameBoard[0][2] == 'X' &&
             gameBoard[0][1] != 'O') {
@@ -207,13 +213,31 @@ class GameEngine {
             (gameBoard[0][0] != 'O' && gameBoard[0][0] != 'X')) {
           gameBoard[0][0] = 'X';
           showGameBoard();
+        } else if (gameBoard[0][2] == 'X' &&
+            gameBoard[2][2] != 'X' &&
+            gameBoard[2][2] != '0') {
+          gameBoard[2][2] = 'X';
+          showGameBoard();
         }
+
         break;
       case 7:
         if (gameBoard[0][0] == gameBoard[2][0] &&
             (gameBoard[0][0] == 'X' &&
                 (gameBoard[1][0] != 'X' && gameBoard[1][0] != 'O'))) {
           gameBoard[1][0] = 'X';
+          showGameBoard();
+        } else if (gameBoard[2][2] == gameBoard[1][1] &&
+            gameBoard[1][1] == 'O' &&
+            gameBoard[0][0] != 'O' &&
+            gameBoard[0][0] != 'X') {
+          gameBoard[0][0] = 'X';
+          showGameBoard();
+        } else if (gameBoard[0][0] == gameBoard[2][2] &&
+            gameBoard[2][2] == 'O' &&
+            gameBoard[1][1] != 'O' &&
+            gameBoard[1][1] != 'X') {
+          gameBoard[1][1] = 'X';
           showGameBoard();
         } else if (gameBoard[2][0] == gameBoard[0][2] &&
             gameBoard[2][0] == 'X' &&
@@ -227,6 +251,25 @@ class GameEngine {
             gameBoard[2][1] != 'X') {
           gameBoard[2][1] = 'X';
           showGameBoard();
+        } else if (gameBoard[0][0] == gameBoard[2][2] &&
+            gameBoard[2][2] == 'X' &&
+            gameBoard[1][1] != 'O' &&
+            gameBoard[1][1] != 'X') {
+          gameBoard[1][1] = 'X';
+          showGameBoard();
+        } else if (gameBoard[0][2] == gameBoard[2][2] &&
+            gameBoard[2][2] == 'X' &&
+            gameBoard[1][2] != 'X' &&
+            gameBoard[1][2] != 'O') {
+          gameBoard[1][2] = 'X';
+          showGameBoard();
+        }
+        break;
+      case 9:
+        if (gameBoard[1][0] != 'O' && gameBoard[1][0] != 'X') {
+          gameBoard[1][0] = 'X';
+        } else if (gameBoard[1][2] != 'O' && gameBoard[1][2] != 'X') {
+          gameBoard[1][2] = 'X';
         }
     }
   }
@@ -256,6 +299,7 @@ class GameEngine {
         isGameWin = checkWinner();
         isAiTurn = false;
         gameTurnCount++;
+        gameEndCount--;
       } else {
         print("zero turn ---> turn count - $gameTurnCount");
         // showGameBoard();
