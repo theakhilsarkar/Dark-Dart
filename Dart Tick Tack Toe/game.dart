@@ -5,6 +5,7 @@ class GameEngine {
   bool isGameWin = false;
   bool crossTurn = true;
   int gameEndCount = 9;
+  int gameTurnCount = 1;
   String winnerStatus = 'Draw';
   List<List<dynamic>> gameBoard = [
     [0, 1, 2],
@@ -131,7 +132,7 @@ class GameEngine {
     }
     gameBoard[x][y] = 'O';
     gameEndCount--;
-    print(gameEndCount);
+    // print(gameEndCount);
     print("\n");
   }
 
@@ -150,19 +151,23 @@ class GameEngine {
     }
     gameBoard[x][y] = 'X';
     gameEndCount--;
-    print(gameEndCount);
+    // print(gameEndCount);
     print("\n");
   }
+
+  // ! main method for start game
 
   void startGame() {
     if (crossTurn) {
       crossInput();
       isGameWin = checkWinner();
       crossTurn = false;
+      gameTurnCount++;
     } else {
       zeroInput();
       isGameWin = checkWinner();
       crossTurn = true;
+      gameTurnCount++;
     }
 
     if (isGameWin || gameEndCount == 0) {
