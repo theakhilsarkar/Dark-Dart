@@ -1,43 +1,34 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-
-class Operator
+class Employee
 {
-    int num;
-    public:
+protected:
+    int age;
 
+public:
     void set()
     {
-        cout << "Enter a num : ";
-        cin >> num;
+        cout << "Enter the employee Age : ";
+        cin >> age;
     }
-    
-    bool operator>(Operator op)
+    void get()
     {
-        if(num>op.num)
-        {
-            return true;
-        }
-        else{
-            return false;
-        }
+        cout << "Employe Age : " << age << endl;
     }
-};
+    Employee operator-(Employee &e2)
+    {
+        Employee temp;
+        this->e1.age = e2.age;
+        e1.age - e2.age;
+    }
 
-int main()
+} int main()
 {
-    Operator o1,o2;
-    o1.set();
-    o2.set();
+    Employee e1, e2, e3;
+    e1.set();
+    e2.set();
+    e3 = e1 - e2;
 
-    if(o1>o2) // o1.operator>(o2)
-    {
-        cout << "O1 is max !";
-    }
-    else{
-
-        cout << "O2 is max !";
-    }
-
+    e3.get();
     return 0;
 }
