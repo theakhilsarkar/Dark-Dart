@@ -9,13 +9,15 @@ void main() {
   List list3 = const [1, 2, 3];
   List<int> list4 = [1, 2, 3];
 
-  list.add(10);
-  list2.add(6);
-  list3.add(11);
+  assert(2 + 3 == 5);
 
-  print(list3);
-  print(list2);
-  print(list);
+  // list.add(10);
+  // list2.add(6);
+  // list3.add(11);
+
+  // print(list3);
+  // print(list2);
+  // print(list);
 
   // growableList.forEach((element) {
   //   print(element);
