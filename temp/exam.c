@@ -9,43 +9,33 @@
 int main()
 {
 	int x = 1;
-	int p = 9;
-	int q = -2;
+	int i,j,k;
 
-    for(int i=1; i<=5; i++)
+	for(i=1; i<=6; i++)
 	{
-		x = i;
-		for(int j=1; j<=i; j++)
+		for(k=1; k<i; k++)
 		{
-			if(j==1)
-			{
-				printf("%d ",x);
-				for(int a = 1; a<x; a++)
-				{
-					p-=2;
-					q+=2;
-				}
-				
-			}
-			else if(j==5)
-			{
-				x+=2;
-				printf("%d ",x);
-			}
-			else if(j%2==0)
-			{
-				x = x + p;
-				printf("%d ",x);
-			}
-			else
-			{
-				x = x + q;
-				printf("%d ",x);
-			}
+			printf(" ");
 		}
-		p = 9;
-		q = -2;
+		for(j=i; j<=6; j++)
+		{
+			if(x<=9)
+			{
+				printf("%d ",x);
+			}
+			else{
+				if(x%2==0)
+				{
+					printf("0 ");
+				}
+				else{
+					printf("9 ");
+				}
+			}
+			x++;
+		}
 		printf("\n");
 	}
+
     return 0;
 }

@@ -1,15 +1,11 @@
 import 'dart:io';
 
 void main() {
-  Set s1 = {1, 2, 3, 4, 5};
-  Set s2 = {4, 5, 6, 7, 8};
-
-  print(s1.runtimeType);
-
-  print(s1.union(s2));
-  print(s1.intersection(s2));
-  print(s1.difference(s2));
-  print(s1.length);
-  print(s1.first);
-  print(s1.isEmpty);
+  int x = 1;
+  for (int i = 1; i <= 6; i++) {
+    for (int j = 1; j <= 6; j++) {
+      stdout.write(x);
+      x++;
+    }
+  }
 }
