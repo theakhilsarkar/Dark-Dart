@@ -1,32 +1,19 @@
 import 'dart:io';
 
 void main() {
-  int x, y;
-  // String z = "10";
-
-  stdout.write("Enter x : ");
-
-  // stdout.write("Enter y : ");
+  int x = 10;
+  int y = 0;
+  String name = 'name';
 
   try {
-    x = int.parse(stdin.readLineSync()!);
-    y = int.parse(stdin.readLineSync()!);
-    print(x / y);
-  } on FormatException catch (e) {
-    print("formate exception on error $e");
-  } catch (e) {
-    print("invalid input");
-  } finally {
-    print("thank you");
+    y = int.parse(name);
   }
-
-  // List l1 = [1, 2, 3, 4, 5];
-
-  // try {
-  //   print(l1[6]);
-  // } on RangeError catch (e) {
-  //   print("Enter sahi input ! $e");
-  // } catch (e) {
-  //   print("$e invalid input !");
-  // }
+  // on FormatException catch (e) {
+  //   print(e);
+  //   }
+  catch (e) {
+    print(e.toString() + "error occured");
+  } finally {
+    print("jp bhi ");
+  }
 }
