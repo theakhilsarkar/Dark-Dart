@@ -1,16 +1,26 @@
-class Shape {
-  int? a, b, sum;
+// List of Map, Map of List, Map of Map
+// Dart Objects, List of Object
 
-  // Shape({this.a, this.b}) {
-  //   sum = a! + b!;
-  // }
+// User define Datatype
+// {
+//     'name': 'Karm',
+//     'age': 12,
+//     'std': 5,
+//     'id': 101,
+//   },
+// Model class
+class Student {
+  String? name;
+  int? id, std, age;
 
-  // Shape set({int? a, int? b}) {
-  //   this.a = a;
-  //   this.b = b;
-  //   Shape s1 = Shape();
-  //   s1.a = this.a;
-  //   s1.b = this.b;
-  //   return s1;
-  // }
+  Student._(
+      {required this.name,
+      required this.age,
+      required this.id,
+      required this.std});
+
+  factory Student.fromMap(Map m1) {
+    return Student._(
+        name: m1['name'], age: m1['age'], id: m1['id'], std: m1['std']);
+  }
 }

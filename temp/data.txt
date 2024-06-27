@@ -1,7 +1,0 @@
- employee id :10
-employee name: 10
-exprince : 10 employee id :20
-employee name: 20
-exprince : 20 employee id :30
-employee name: 30
-exprince : 30
