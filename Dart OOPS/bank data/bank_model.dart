@@ -4,19 +4,6 @@
 // Single Map : create the class, and return object.
 // List of Map : covert into List of Object. By loop, every Map convert into Object.
 
-Map data = {
-  "isActive": false,
-  "balance": "3,960.64",
-  "age": 30,
-  "eyeColor": "blue",
-  "name": "Dawn Keith",
-  "gender": "female",
-  "company": "COSMOSIS",
-  "email": "dawnkeith@cosmosis.com",
-  "phone": "+1 (839) 437-3421",
-  "address": "392 Clifford Place, Fontanelle, Arizona, 2687"
-};
-
 // class : user define datatype
 // {} -> class
 

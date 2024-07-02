@@ -4,9 +4,9 @@ import 'bank_model.dart';
 void main() {
   BankModel bankModel = BankModel.fromList(bankData);
 
-  for (int i = 0; i < bankModel.bankList.length; i++) {
-    print(bankModel.bankList[i].name);
-    print(bankModel.bankList[i].balance);
+  for (var b1 in bankModel.bankList) {
+    print(b1.name);
+    print(b1.balance);
     print("");
   }
 
@@ -24,12 +24,12 @@ void main() {
   s1.twoSum([1, 2, 3, 4], 5);
 }
 
-  class Solution {
-    List<int> twoSum(List<int> nums, int target) {
-      // code ,,,,,
-      return [];
-    }
+class Solution {
+  List<int> twoSum(List<int> nums, int target) {
+    // code ,,,,,
+    return [];
   }
+}
 
 // model class + factory constrctor
 // for,while,do..while loop no use
