@@ -2,38 +2,70 @@ import 'dart:collection';
 
 void main() {
   Solution s1 = Solution();
-  List<int> num = [0, 0, 0, 0];
+  List<int> num = [-2, 0, 0, 2, 2];
+
+  // -1 + 0 + -4 = -5
+  // -1 + 1 + -4 = 2
   print(s1.threeSum(num));
 }
 
 class Solution {
   List<List<int>> threeSum(List<int> nums) {
     List<List<int>> ans = [];
-    for (int i = 0; i < nums.length; i++) {
-      for (int j = i + 1; j < nums.length; j++) {
-        for (int k = j + 1; k < nums.length; k++) {
-          if (nums[i] + nums[j] + nums[k] == 0) {
-            List<int> res = [nums[i], nums[j], nums[k]];
-            res.sort();
-            ans.add(res);
-          }
-        }
-      }
-    }
-
-    for (int i = 0; i < ans.length; i++) {
-      for (int j = i + 1; j < ans.length; j++) {
-        int duplicate = 0;
-        for (int k = 0; k < 3; k++) {
-          if (ans[i][k] == ans[j][k]) {
-            duplicate++;
-          }
-        }
-        if (duplicate == 3) {
-          ans.removeAt(j);
+    nums.sort();
+    print(nums);
+    for (int i = 0; i < nums.length - 2; i++) {
+      int j = i + 1;
+      int k = nums.length - 1;
+      if (i > 0 && nums[i] == nums[i - 1]) continue;
+      while (j < k) {
+        if (nums[i] + nums[j] + nums[k] == 0) {
+          List<int> res = [nums[i], nums[j], nums[k]];
+          res.sort();
+          ans.add(res);
+          j++;
+          k--;
+        } else if (nums[i] + nums[j] + nums[k] > 0) {
+          k--;
+        } else {
+          j++;
         }
       }
     }
     return ans;
   }
 }
+
+// class Solution {
+//   List<List<int>> threeSum(List<int> nums) {
+//     List<List<int>> ans = [];
+    
+//     for (int i = 0; i < nums.length; i++) {
+//       for (int j = i + 1; j < nums.length; j++) {
+//         for (int k = j + 1; k < nums.length; k++) {
+//           if (nums[i] + nums[j] + nums[k] == 0) {
+//             List<int> res = [nums[i], nums[j], nums[k]];
+//             ans.add(res);
+//           }
+//         }
+//       }
+//     }
+
+//     for (int i = 0; i < ans.length; i++) {
+//       for (int k = i + 1; k < ans.length; k++) {
+//         bool isDuplicate = true;
+//         for (int j = 0; j < ans[i].length; j++) {
+//           if (ans[i][j] != ans[k][j]) {
+//             isDuplicate = false;
+//             break;
+//           }
+//         }
+//         if (isDuplicate) {
+//           ans.removeAt(k);
+//           k--;
+//         }
+//       }
+//     }
+//     return ans;
+//   }
+// }
