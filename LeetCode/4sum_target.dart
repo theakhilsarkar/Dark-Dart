@@ -9,20 +9,27 @@ class Solution {
     List<List<int>> ans = [];
     nums.sort();
     print(nums);
-    for (int i = 0; i < nums.length - 3; i++) {
+    for (int i = 0; i < nums.length - 2; i++) {
+      //--->
+
       int j = i + 1;
       int k = j + 1;
       int l = nums.length - 1;
-      if (i > 0 && nums[i] == nums[i - 1]) continue;
+
+      if (i > 0 && nums[i] == nums[i - 1]) continue; // <----
+
       while (k < l) {
-        if (nums[i] + nums[j] + nums[k] == target) {
+        if (nums[i] + nums[j] + nums[k] + nums[l] == target) {
           ans.add([
             nums[i],
             nums[j],
             nums[k],
+            nums[l],
           ]);
         }
       }
+
+      //<---
     }
     return ans;
   }
