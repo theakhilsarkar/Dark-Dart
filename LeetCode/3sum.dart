@@ -1,7 +1,6 @@
 void main() {
   Solution s1 = Solution();
   List<int> num = [-2, 0, 0, 2, 2];
-
   // -1 + 0 + -4 = -5
   // -1 + 1 + -4 = 2
   print(s1.threeSum(num));
