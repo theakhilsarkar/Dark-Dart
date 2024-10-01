@@ -2,20 +2,34 @@ class Solution {
   List<List<int>> combinationSum(List<int> l1, int target) {
     List<List<int>> ans = [];
 
-    for(int i=0; i<l1.length; i++)
-    {
-      if(l1[i]==target){
+    for (int i = 0; i < l1.length; i++) {
+      if (l1[i] == target) {
         ans.add([l1[i]]);
       }
-      for(int j=i+1; j<l1.length; j++)
+      if(target%2==0)
       { 
-        if(l1[i] + l1[j] == target){
-          ans.add([l1[i],l1[j]]);
-        }
-        if(l1[i] + l1[j] != target ){
-          if(l1.contains(target - (l1[i] + l1[j])))
+        if(target%l1[i]==0)
+        {
+          int x = l1[i];
+          List<int> y = [];
+          while(x<=target+l1[i]){
+            y.add(l1[i]);
+            x*=2;
+          }
+          if(y.isNotEmpty)
           {
-            ans.add([l1[i],l1[j],target - (l1[i] + l1[j])]);
+            ans.add(y);
+          }
+        }
+      }
+
+      for (int j = i + 1; j < l1.length; j++) {
+        if (l1[i] + l1[j] == target) {
+          ans.add([l1[i], l1[j]]);
+        }
+        if (l1[i] + l1[j] != target) {
+          if (l1.contains(target - (l1[i] + l1[j]))) {
+            ans.add([l1[i], l1[j], target - (l1[i] + l1[j])]);
           }
         }
       }
@@ -24,11 +38,9 @@ class Solution {
   }
 }
 
-
-void main()
-{
+void main() {
   Solution s1 = Solution();
-  print(s1.combinationSum([2,3,5], 8));
+  print(s1.combinationSum([2,3], 6));
 }
 
 // combination of sum of 7
