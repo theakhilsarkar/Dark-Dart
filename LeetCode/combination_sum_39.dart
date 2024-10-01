@@ -6,22 +6,21 @@ class Solution {
       if (l1[i] == target) {
         ans.add([l1[i]]);
       }
-      if(target%2==0)
-      { 
-        if(target%l1[i]==0)
+       
+        if(target%l1[i]==0 && l1[i]!=target)
         {
           int x = l1[i];
           List<int> y = [];
-          while(x<=target+l1[i]){
+          while(x<=target){
             y.add(l1[i]);
-            x*=2;
+            x+=l1[i];
           }
           if(y.isNotEmpty)
           {
             ans.add(y);
           }
         }
-      }
+
 
       for (int j = i + 1; j < l1.length; j++) {
         if (l1[i] + l1[j] == target) {
@@ -40,7 +39,7 @@ class Solution {
 
 void main() {
   Solution s1 = Solution();
-  print(s1.combinationSum([2,3], 6));
+  print(s1.combinationSum([2,3,6,7], 7));
 }
 
 // combination of sum of 7
