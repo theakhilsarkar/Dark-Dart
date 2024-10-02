@@ -39,7 +39,7 @@ class Solution {
 
 void main() {
   Solution s1 = Solution();
-  print(s1.combinationSum([2,3,6,7], 7));
+  print(s1.combinationSum([2,3,7],18));
 }
 
 // combination of sum of 7
