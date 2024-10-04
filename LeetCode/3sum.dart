@@ -1,9 +1,8 @@
-import 'dart:collection';
+
 
 void main() {
   Solution s1 = Solution();
   List<int> num = [-2, 0, 0, 2, 2];
-
   // -1 + 0 + -4 = -5
   // -1 + 1 + -4 = 2
   print(s1.threeSum(num));
@@ -24,8 +23,8 @@ class Solution {
       while (j < k) {
         if (nums[j] + nums[k] == target) {
           List<int> res = [nums[i], nums[j], nums[k]];
-          while (j < k && nums[j] == nums[j + 1]) j++;
-          while (j < k && nums[k] == nums[k - 1]) k--;
+          while (nums[j] == nums[j + 1]) j++;
+          while (nums[k] == nums[k - 1]) k--;
           ans.add(res);
           j++;
           k--;
