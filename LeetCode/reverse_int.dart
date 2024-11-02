@@ -1,4 +1,4 @@
-void main() {
+uvoid main() {
   print(reverse(120));
 }
 
@@ -20,3 +20,5 @@ int reverse(int x) {
 
   return reverse;
 }
+
+
