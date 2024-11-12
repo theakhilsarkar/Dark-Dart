@@ -13,6 +13,8 @@ void main() {
   s1.exist(board, word);
 }
 
+// find name, consist name not only match word
+
 class Solution {
   bool exist(List<List<String>> board, String word) {
     int sl = 0;
