@@ -1,4 +1,4 @@
-uvoid main() {
+void main() {
   print(reverse(120));
 }
 
