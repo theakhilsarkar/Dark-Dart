@@ -34,12 +34,38 @@
 //   }
 // }
 
+void main() {
+  Solution s1 = Solution();
+  print(s1.combinationSum([2, 3, 7], 18));
+}
+
+class Solution {
+  List<List<int>> combinationSum(List<int> l1, int target) {
+    List<List<int>> ans = [];
+
+    for (int i = 0; i < l1.length - 1; i++) {
+      if (target % l1[i] == 0) {
+        int same = l1[i];
+        List<int> temp = [];
+        while (same <= target) {
+          temp.add(l1[i]);
+          same += l1[i];
+        }
+        ans.add(temp);
+      }
+
+      if (l1[i] + l1[i + 1] == target) {
+        ans.add([l1[i], l1[i + 1]]);
+      }
+    }
+
+    return ans;
+  }
+}
 
 
-// void main() {
-//   Solution s1 = Solution();
-//   print(s1.combinationSum([2, 3, 7], 18));
-// }
+
+
 
 // combination of sum of 7
 // 0,7
