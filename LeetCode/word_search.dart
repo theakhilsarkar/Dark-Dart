@@ -23,7 +23,8 @@ class Solution {
         if (sl == word.length) break;
         if (word[sl] == board[i][j] && sl < word.length) {
           stdout.write(board[i][j]);
-          if (sl < word.length - 1) { // 2<2
+          if (sl < word.length - 1) {
+            // 2<2
             sl++;
           }
         } else {
@@ -36,5 +37,3 @@ class Solution {
     return true;
   }
 }
-
-
