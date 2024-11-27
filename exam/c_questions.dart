@@ -39,4 +39,3 @@ List c_language_questionList = [
   "What is an Array of objects in Structure? Describe with an example.",
   "why we use file handling ?",
 ];
-
