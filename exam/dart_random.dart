@@ -7,7 +7,7 @@ import 'flutter_11am.dart';
 
 void main() {
   Random random = Random();
-  int name = random.nextInt(6);
+  int name = random.nextInt(2);
 
   int question1 = random.nextInt(30);
   int question2 = random.nextInt(30);
@@ -16,7 +16,7 @@ void main() {
   int question5 = random.nextInt(30);
 
   print("\n");
-  print("Name : ${studentListOf11Am[name]}");
+  print("Name : ${studentListOf11Am[0]}");
   print("");
 
   print("Q1 : ${advanceFlutterExam1[question1]}");
@@ -27,4 +27,3 @@ void main() {
 
   print("\n");
 }
-
