@@ -1,8 +1,4 @@
 import 'dart:math';
-
-import 'adv_flutter_exam1.dart';
-
-import 'flutter_11am.dart';
 import 'flutter_3pm.dart';
 import 'php_questions.dart';
 
@@ -15,9 +11,10 @@ void main() {
   int question3 = random.nextInt(24);
   int question4 = random.nextInt(24);
   int question5 = random.nextInt(24);
+  int question6 = random.nextInt(24);
 
   print("\n");
-  print("Name : ${studentListOf3pm[name]}");
+  print("Name : ${studentListOf3pm[7]}");
   print("");
 
   print("Q1 : ${php_questions_list[question1]}");
@@ -25,7 +22,7 @@ void main() {
   print("Q3 : ${php_questions_list[question3]}");
   print("Q4 : ${php_questions_list[question4]}");
   print("Q5 : ${php_questions_list[question5]}");
+  print("Q6 : ${php_questions_list[question6]}");
 
   print("\n");
-  
 }

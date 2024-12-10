@@ -1,4 +1,3 @@
-
 List studentListOf3pm = [
   "Darshan Patel",
   "Dipali Gunjal",
@@ -6,10 +5,11 @@ List studentListOf3pm = [
   "Niraj Rajput",
   "Fenish Patel",
   "Meet Panchal",
-  "Zimil Patel",
-  "Anjali Purohit",
+  // "Anjali Purohit",
   "Ayush Maurya",
   "Jaydeep Sharma",
-  "Ashupal Deora",
+  // "Ashupal Deora",
   "Drashti Patel",
+  "Ayush Patel",
+  "Meshva Patel",
 ];
