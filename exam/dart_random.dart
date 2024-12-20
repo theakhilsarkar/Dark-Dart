@@ -5,7 +5,7 @@ import 'php_questions.dart';
 void main() {
   Random random = Random();
   int name = random.nextInt(13);
-
+  
   int question1 = random.nextInt(24);
   int question2 = random.nextInt(24);
   int question3 = random.nextInt(24);
@@ -14,7 +14,8 @@ void main() {
   int question6 = random.nextInt(24);
 
   print("\n");
-  print("Name : ${studentListOf3pm[7]}");
+  print("Name : Sahil Prajapati");
+
   print("");
 
   print("Q1 : ${php_questions_list[question1]}");
