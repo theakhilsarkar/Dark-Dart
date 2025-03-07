@@ -1,0 +1,118 @@
+{
+  "guj": {
+    "std-10": {
+      "subjects": ["Gujrati", "Maths", "English", "Hindi"],
+      "A": {
+        "students": [
+          {
+            "fname": "Raj",
+            "lname": "Patel",
+            "rollno": 1,
+            "attendance": {
+              "03/01/2025": "P",
+              "04/01/2025": "A",
+              "05/01/2025": "OL"
+            }
+          },
+          {
+            "fname": "Amit",
+            "lname": "Kumar",
+            "rollno": 2,
+            "attendance": {
+              "03/01/2025": "P",
+              "04/01/2025": "A",
+              "05/01/2025": "OL"
+            }
+          }
+        ],
+        "others": {}
+      }
+    },
+    "std-11-com": {
+      "subjects": ["State", "English", "Economics", "Account"],
+      "A": {
+        "students": [
+          {
+            "fname": "Raj",
+            "lname": "Patel",
+            "rollno": 1,
+            "attendance": {
+              "03/01/2025": "P",
+              "04/01/2025": "A",
+              "05/01/2025": "OL"
+            }
+          },
+          {
+            "fname": "Amit",
+            "lname": "Kumar",
+            "rollno": 2,
+            "attendance": {
+              "03/01/2025": "P",
+              "04/01/2025": "A",
+              "05/01/2025": "OL"
+            }
+          }
+        ],
+        "others": {}
+      }
+    },
+    "std-11-sci": {
+      "subjects": ["Physics", "Chemistry", "Maths", "Biology"],
+      "A": {
+        "students": [
+          {
+            "fname": "Raj",
+            "lname": "Patel",
+            "rollno": 1,
+            "attendance": {
+              "03/01/2025": "P",
+              "04/01/2025": "A",
+              "05/01/2025": "OL"
+            }
+          },
+          {
+            "fname": "Amit",
+            "lname": "Kumar",
+            "rollno": 2,
+            "attendance": {
+              "03/01/2025": "P",
+              "04/01/2025": "A",
+              "05/01/2025": "OL"
+            }
+          }
+        ],
+        "others": {}
+      }
+    }
+  },
+  "eng": {
+    "std-11-com": {
+      "subjects": ["State", "English", "Economics", "Account"],
+      "A": {
+        "students": [
+          {
+            "fname": "Raj",
+            "lname": "Patel",
+            "rollno": 1,
+            "attendance": {
+              "03/01/2025": "P",
+              "04/01/2025": "A",
+              "05/01/2025": "OL"
+            }
+          },
+          {
+            "fname": "Amit",
+            "lname": "Kumar",
+            "rollno": 2,
+            "attendance": {
+              "03/01/2025": "P",
+              "04/01/2025": "A",
+              "05/01/2025": "OL"
+            }
+          }
+        ],
+        "others": {}
+      }
+    }
+  }
+}
