@@ -134,3 +134,157 @@
 //       Employee("Suarj", "20", "Male", "10025", "Sr. Developer", "150000");
 //   suraj.displayDetails();
 // }
+
+// OOP vs Adv OOP, ENC,INH
+
+// Polymorphism
+// Poly(multiple/many) + Morphism
+
+// one thing behave like multiple ways
+// multiple ways behave like one thing
+
+// Polymorphism is a fundamental concept of oop which allow
+// object to perform as many ways.
+// in...p.. defferent behaviour/process work like same unit and
+// some time same unit work like defferent process.
+
+// ... which allow single entity to behave like many forms and
+// many forms behave like single entity.
+
+// types :
+// 1. runtime : process after compiler and during running : bug
+// 2. compile time : before run, code is compiling/readinh : erro : syntax error
+
+// 1. runtime :
+// method overriding
+
+// 2. compile time
+// function - each function should be perform single process
+// method overloading : we overload any method to do multiple task by single method.
+// method overloading : here single method perform many process
+// single unit perform many process
+// single entity have many forms.
+
+// class ApiHelper {
+// here apicall method behave like multiple ways
+// or perform multiple process in same method.
+//   void apiCall(type) {
+//     if (type == 'GET' || type == 'get') {
+//       print("GET API is called...!");
+//     } else if (type == 'POST' || type == 'post') {
+//       print("POST API is called...!");
+//     }
+//   }
+// }
+
+// method overriding - min-2 class, inheritance necessary, parent class -method name and child class method name same
+// here class a method get is override by class b method get
+//
+// class A {
+//   get(name) {
+//     print("class a method");
+//   }
+// }
+
+// same blueprint/class can create multiple objects
+// each object perform sapretly.
+
+// a1 -> get("deep")
+// a2 -> get("kashish")
+// a3 -> get("priyam")
+
+// class B extends A {
+//   @override
+//   get() {
+//     print("class b method");
+//   }
+// }
+
+// void main() {
+//   A a1 = A();
+//   a1.get();
+
+//   B b1 = B(); // B -> A:get, B:get
+//   b1.get();
+// }
+
+// data abstraction - hide essential information to the user, and show only necessary information.
+// hide complex implementation from the user.
+
+// class Person {
+// private : using underscore (_)
+// cant access attribute and method outside the class.
+// Dart - private attribute cant access in another file.
+// we secure data from direct access of the user.
+// String? _name, _age, _gender;
+// Person(name, age, gender) {
+//   this._name = name;
+//   this._age = age;
+//   this._gender = gender;
+// }
+
+// get() {
+//   print(_name);
+//   print(_age);
+//   print(_gender);
+// }
+
+//   post() {}
+
+//   update() {}
+
+//   api() {}
+// }
+
+// abstract class
+// we can create abstract class using abstract keyword.
+// we cant create object of abstract class.
+// to use abstract class we must need to inherit with another class.
+
+// abstract class can hold concreat method & abstract method.
+// concreat method - simple methods
+// abstract method - method which not have body, we must have
+// to give body to the method in child class.
+// abstract class A {
+//   printA() {
+//     print("abstract class A");
+//   }
+
+//   //abstract method
+//   void absMethod();
+// }
+
+// class B extends A {
+//   @override
+//   void absMethod() {
+//     print("abstract method !");
+//   }
+// }
+
+// abstract class StateFullWidget {
+//   int build(bool context);
+//   initState() {}
+// }
+
+// class HomeScreen extends StateFullWidget {
+
+//  here we inherit absract class and create abstract method.
+//   @override
+//   initState() {
+//     // TODO: implement initState
+//     return super.initState();
+
+
+//   }
+
+//   @override
+//   int build(bool context) {
+//     // TODO: implement build
+//     return 0;
+//   }
+// }
+
+// // ERP
+// // ERP
+
+// void main() {}
