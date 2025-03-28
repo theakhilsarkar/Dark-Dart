@@ -245,6 +245,7 @@
 // concreat method - simple methods
 // abstract method - method which not have body, we must have
 // to give body to the method in child class.
+
 // abstract class A {
 //   printA() {
 //     print("abstract class A");
@@ -274,7 +275,6 @@
 //     // TODO: implement initState
 //     return super.initState();
 
-
 //   }
 
 //   @override
@@ -289,5 +289,72 @@
 
 // void main() {}
 
+// inheritance - one class connect to another class
+// child class can access whole details of parent class.
 
-dart
+// class Car {
+//   String? engine, wheels, staring, gearBox;
+// }
+
+// class Facebook extends Car {
+//   String? color, company, model;
+// }
+
+// mixin - you can use one code for multiple times
+// reuseabilty
+
+// mixin - methods
+
+// package : animation
+// mixix make code more reuseable and its faster than inheritance if we not need to
+// inherit whole class.
+// to declare mixin class use mixin keyword, and use with keyword to conncet class.
+
+// mixin Animation {
+//   void pageTransition() {
+//     print("Page Transition...");
+//   }
+
+//   void scroll() {
+//     print("Scrolling...");
+//   }
+
+//   void crossFade();
+// }
+
+// mixin ClickEvents {
+//   void click() {}
+// }
+// // you can also connect more than one mixin with class.
+
+// mixin class Hover {}
+
+// class Home extends Hover with Animation, ClickEvents {
+//   @override
+//   void crossFade() {
+//     // TODO: implement crossFade
+//   }
+// }
+
+// abstract class Normal {
+//   void concreat() {}
+//   void abstractMethod();
+// }
+// // implements : mandatory all properties of abstract class should be initialized in child class.
+
+// class A implements Normal {
+//   @override
+//   void concreat() {
+//     // TODO: implement concreat
+//   }
+//   @override
+//   void abstractMethod() {
+//     // TODO: implement abstractMethod
+//   }
+// }
+
+// void main() {
+//   var n1 = A();
+// }
+
+
