@@ -13,12 +13,18 @@
 // (4,3),9
 // (5,2),10
 // (6,1),11
+
+// 6,1
+// 7,2
+// 8,3
 import 'dart:io';
 
 void main() {
-  for (int i = 1, x = 6, y = 6; i <= 6; i++, x--, y++) {
+  for (int i = 1, x = 6, y = 6, z = -4, a = 16;
+      i <= 11;
+      i++, x--, y++, z++, a--) {
     for (int j = 1; j <= 11; j++) {
-      if (j == x || j == y) {
+      if (j == x || j == y || (i >= 6 && j == z) || (i >= 6 && j == a)) {
         stdout.write("*");
       } else {
         stdout.write(" ");
@@ -26,4 +32,26 @@ void main() {
     }
     print("");
   }
+
+  // for (int i = 1, x = 6, y = 6, z = 11; i <= 11; i++, x--, y++, z--) {
+  //   for (int j = 1; j <= 11; j++) {
+
+  //     if (i == j || j == z) {
+  //       stdout.write("*");
+  //     } else {
+  //       stdout.write(" ");
+  //     }
+  //   }
+  //   print("");
+  // }
+  // for (int i = 1, x = 11; i <= 6; i++, x--) {
+  //   for (int j = 1; j <= 11; j++) {
+  //     if (i == j || j == x) {
+  //       stdout.write("*");
+  //     } else {
+  //       stdout.write(" ");
+  //     }
+  //   }
+  //   print("");
+  // }
 }
